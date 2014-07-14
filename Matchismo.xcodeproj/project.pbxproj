@@ -21,6 +21,10 @@
 		4F29E5F9197462C700091C41 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F29E5DB197462C700091C41 /* UIKit.framework */; };
 		4F29E601197462C700091C41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F29E5FF197462C700091C41 /* InfoPlist.strings */; };
 		4F29E603197462C700091C41 /* MatchismoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F29E602197462C700091C41 /* MatchismoTests.m */; };
+		4FFAFC961974921F00CD1419 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAFC951974921F00CD1419 /* Card.m */; };
+		4FFAFC99197496C400CD1419 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAFC98197496C400CD1419 /* Deck.m */; };
+		4FFAFC9C1974990300CD1419 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAFC9B1974990300CD1419 /* PlayingCard.m */; };
+		4FFAFC9F19749C4800CD1419 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAFC9E19749C4800CD1419 /* PlayingCardDeck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		4F29E5FE197462C700091C41 /* MatchismoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MatchismoTests-Info.plist"; sourceTree = "<group>"; };
 		4F29E600197462C700091C41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4F29E602197462C700091C41 /* MatchismoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchismoTests.m; sourceTree = "<group>"; };
+		4FFAFC941974921F00CD1419 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Model/Card.h; sourceTree = "<group>"; };
+		4FFAFC951974921F00CD1419 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Model/Card.m; sourceTree = "<group>"; };
+		4FFAFC97197496C400CD1419 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = Model/Deck.h; sourceTree = "<group>"; };
+		4FFAFC98197496C400CD1419 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Deck.m; path = Model/Deck.m; sourceTree = "<group>"; };
+		4FFAFC9A1974990300CD1419 /* PlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCard.h; path = Model/PlayingCard.h; sourceTree = "<group>"; };
+		4FFAFC9B1974990300CD1419 /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCard.m; path = Model/PlayingCard.m; sourceTree = "<group>"; };
+		4FFAFC9D19749C4800CD1419 /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardDeck.h; path = Model/PlayingCardDeck.h; sourceTree = "<group>"; };
+		4FFAFC9E19749C4800CD1419 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = Model/PlayingCardDeck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +124,8 @@
 		4F29E5DD197462C700091C41 /* Matchismo */ = {
 			isa = PBXGroup;
 			children = (
+				4FFAFC93197491E500CD1419 /* Model */,
+				4FFAFC92197491DE00CD1419 /* Supporting Files */,
 				4F29E5E6197462C700091C41 /* CardAppDelegate.h */,
 				4F29E5E7197462C700091C41 /* CardAppDelegate.m */,
 				4F29E5E9197462C700091C41 /* Main.storyboard */,
@@ -150,6 +164,28 @@
 				4F29E5FF197462C700091C41 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4FFAFC92197491DE00CD1419 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4FFAFC93197491E500CD1419 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4FFAFC941974921F00CD1419 /* Card.h */,
+				4FFAFC951974921F00CD1419 /* Card.m */,
+				4FFAFC97197496C400CD1419 /* Deck.h */,
+				4FFAFC98197496C400CD1419 /* Deck.m */,
+				4FFAFC9A1974990300CD1419 /* PlayingCard.h */,
+				4FFAFC9B1974990300CD1419 /* PlayingCard.m */,
+				4FFAFC9D19749C4800CD1419 /* PlayingCardDeck.h */,
+				4FFAFC9E19749C4800CD1419 /* PlayingCardDeck.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FFAFC9C1974990300CD1419 /* PlayingCard.m in Sources */,
+				4FFAFC99197496C400CD1419 /* Deck.m in Sources */,
 				4F29E5E8197462C700091C41 /* CardAppDelegate.m in Sources */,
 				4F29E5E4197462C700091C41 /* main.m in Sources */,
+				4FFAFC9F19749C4800CD1419 /* PlayingCardDeck.m in Sources */,
 				4F29E5EE197462C700091C41 /* CardViewController.m in Sources */,
+				4FFAFC961974921F00CD1419 /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +497,7 @@
 				4F29E608197462C700091C41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4F29E609197462C700091C41 /* Build configuration list for PBXNativeTarget "MatchismoTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +506,7 @@
 				4F29E60B197462C700091C41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
