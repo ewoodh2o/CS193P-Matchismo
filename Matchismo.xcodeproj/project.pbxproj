@@ -25,6 +25,7 @@
 		4FFAFC99197496C400CD1419 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAFC98197496C400CD1419 /* Deck.m */; };
 		4FFAFC9C1974990300CD1419 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAFC9B1974990300CD1419 /* PlayingCard.m */; };
 		4FFAFC9F19749C4800CD1419 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAFC9E19749C4800CD1419 /* PlayingCardDeck.m */; };
+		4FFAFCA219783A4F00CD1419 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAFCA119783A4F00CD1419 /* CardMatchingGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		4FFAFC9B1974990300CD1419 /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCard.m; path = Model/PlayingCard.m; sourceTree = "<group>"; };
 		4FFAFC9D19749C4800CD1419 /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardDeck.h; path = Model/PlayingCardDeck.h; sourceTree = "<group>"; };
 		4FFAFC9E19749C4800CD1419 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = Model/PlayingCardDeck.m; sourceTree = "<group>"; };
+		4FFAFCA019783A4F00CD1419 /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardMatchingGame.h; sourceTree = "<group>"; };
+		4FFAFCA119783A4F00CD1419 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardMatchingGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,8 @@
 		4FFAFC93197491E500CD1419 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4FFAFCA019783A4F00CD1419 /* CardMatchingGame.h */,
+				4FFAFCA119783A4F00CD1419 /* CardMatchingGame.m */,
 				4FFAFC941974921F00CD1419 /* Card.h */,
 				4FFAFC951974921F00CD1419 /* Card.m */,
 				4FFAFC97197496C400CD1419 /* Deck.h */,
@@ -282,6 +287,7 @@
 				4FFAFC99197496C400CD1419 /* Deck.m in Sources */,
 				4F29E5E8197462C700091C41 /* CardAppDelegate.m in Sources */,
 				4F29E5E4197462C700091C41 /* main.m in Sources */,
+				4FFAFCA219783A4F00CD1419 /* CardMatchingGame.m in Sources */,
 				4FFAFC9F19749C4800CD1419 /* PlayingCardDeck.m in Sources */,
 				4F29E5EE197462C700091C41 /* CardViewController.m in Sources */,
 				4FFAFC961974921F00CD1419 /* Card.m in Sources */,
