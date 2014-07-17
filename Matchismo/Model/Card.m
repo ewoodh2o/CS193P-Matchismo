@@ -16,7 +16,8 @@
 @implementation Card
 
 
-- (int)match:(NSArray *)cards {
+- (int)match:(NSArray *)cards
+{
     int score = 0;
     
     for(Card *card in cards) {
@@ -27,7 +28,8 @@
     return score;
 }
 
-- (UIColor *)color {
+- (UIColor *)color
+{
     return [UIColor blackColor];
 }
 

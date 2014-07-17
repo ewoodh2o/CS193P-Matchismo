@@ -125,9 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				4FFAFC93197491E500CD1419 /* Model */,
-				4FFAFC92197491DE00CD1419 /* Supporting Files */,
-				4F29E5E6197462C700091C41 /* CardAppDelegate.h */,
-				4F29E5E7197462C700091C41 /* CardAppDelegate.m */,
 				4F29E5E9197462C700091C41 /* Main.storyboard */,
 				4F29E5EC197462C700091C41 /* CardViewController.h */,
 				4F29E5ED197462C700091C41 /* CardViewController.m */,
@@ -140,6 +137,8 @@
 		4F29E5DE197462C700091C41 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4F29E5E6197462C700091C41 /* CardAppDelegate.h */,
+				4F29E5E7197462C700091C41 /* CardAppDelegate.m */,
 				4F29E5DF197462C700091C41 /* Matchismo-Info.plist */,
 				4F29E5E0197462C700091C41 /* InfoPlist.strings */,
 				4F29E5E3197462C700091C41 /* main.m */,
@@ -162,13 +161,6 @@
 			children = (
 				4F29E5FE197462C700091C41 /* MatchismoTests-Info.plist */,
 				4F29E5FF197462C700091C41 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4FFAFC92197491DE00CD1419 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

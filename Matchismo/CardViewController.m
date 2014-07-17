@@ -25,8 +25,8 @@
     self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
 }
 
-- (IBAction)cardClick:(UIButton *)sender {
-    
+- (IBAction)cardClick:(UIButton *)sender
+{
     if ([sender.currentTitle length]) {
         [sender setBackgroundImage:[UIImage imageNamed:@"CardBack"] forState:UIControlStateNormal];
         [sender setTitle:nil forState:UIControlStateNormal];
@@ -44,11 +44,17 @@
     }
 }
 
-- (Deck *)deck {
+- (Deck *)deck
+{
     if (!_deck) {
-        self.deck = [[PlayingCardDeck alloc] init];
+        self.deck = [self createDeck];
     }
     return _deck;
+}
+
+- (Deck *)createDeck
+{
+    return [[PlayingCardDeck alloc] init];
 }
 
 
