@@ -15,6 +15,10 @@
 
 @implementation Card
 
+- (NSString *)description
+{
+    return self.contents;
+}
 
 - (int)match:(NSArray *)cards
 {

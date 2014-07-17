@@ -13,19 +13,28 @@
 @implementation PlayingCard
 
 - (int)match:(NSArray *)cards {
-    int score = 0;
+    int cardCount = [cards count] + 1;
     
-    if ([cards count] == 1) {
-        PlayingCard *otherCard = [cards firstObject];
-        
-        if (otherCard.rank == self.rank) {
-            score += 4;
-        } else if ([otherCard.suit isEqualToString:self.suit]) {
-            score += 1;
-        }
+    NSMutableSet *ranks = [[NSMutableSet alloc] init];
+    NSMutableSet *suits = [[NSMutableSet alloc] init];
+    
+    [ranks addObject:[NSString stringWithFormat:@"%d", self.rank]];
+    [suits addObject:self.suit];
+    
+    for(PlayingCard *otherCard in cards) {
+        [ranks addObject:[NSString stringWithFormat:@"%d", otherCard.rank]];
+        [suits addObject:otherCard.suit];
+    }
+
+    if ([ranks count] < cardCount) {
+        return pow(4, cardCount - [ranks count]);
     }
     
-    return score;
+    if ([suits count] < cardCount) {
+        return cardCount - [suits count];
+    }
+    
+    return 0;
 }
 
 - (NSString *)contents {

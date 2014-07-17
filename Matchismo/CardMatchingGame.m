@@ -12,6 +12,8 @@
 
 @property (nonatomic, readwrite) NSInteger score;
 @property (strong, nonatomic) NSMutableArray *cards;  // of Card
+@property (nonatomic, readwrite) NSInteger matchMode;
+
 @end
 
 @implementation CardMatchingGame
@@ -22,11 +24,20 @@
     return _cards;
 }
 
-- (instancetype)initWithCardCount:(NSUInteger)count usingDeck:(Deck *)deck
+- (instancetype)initWithCardCount:(NSUInteger)count
+                    withMatchMode:(NSUInteger)matchMode
+                        usingDeck:(Deck *)deck
 {
     self = [super init];
     
     if (self) {
+        if (matchMode >= 2) {
+            self.matchMode = matchMode;
+        } else {
+            self = nil;
+            return self;
+        }
+
         for (int i = 0; i < count; i++) {
             Card *card = [deck drawRandomCard];
             if (card) {
@@ -53,26 +64,38 @@ static const int PEEK_COST = 1;
 - (void)chooseCardAtIndex:(NSUInteger)index
 {
     Card *card = [self cardAtIndex:index];
-    
+    NSMutableArray *chosenCards = [[NSMutableArray alloc] init];
+
     if (!card.isMatched) {
         if (card.isChosen) {
             card.chosen = NO;
+            self.score -= PEEK_COST;
         } else {
+
+            // Collect all chosen cards
             for (Card *otherCard in self.cards) {
                 if(otherCard.isChosen && !otherCard.isMatched) {
-                    int matchScore = [card match:@[otherCard]];
-                    if (matchScore) {
-                        self.score += matchScore * MATCH_BONUS;
-                        otherCard.matched = YES;
-                        card.matched = YES;
-                    } else {
-                        self.score -= MISMATCH_PENALTY;
-                        otherCard.chosen = NO;
-                    }
-                    break;
+                    [chosenCards addObject:otherCard];
                 }
             }
-            self.score -= PEEK_COST;
+            
+            // If enough cards have been selected, try to match them
+            if ([chosenCards count] == self.matchMode - 1) {
+                int matchScore = [card match:chosenCards];
+                if (matchScore) {
+                    card.matched = YES;
+                    self.score += matchScore * MATCH_BONUS;
+                    for(Card *otherCard in chosenCards) {
+                        otherCard.matched = YES;
+                    }
+                } else {
+                    self.score -= MISMATCH_PENALTY;
+                    for(Card *otherCard in chosenCards) {
+                        otherCard.chosen = NO;
+                    }
+                }
+            }
+
             card.chosen = YES;
         }
     }
