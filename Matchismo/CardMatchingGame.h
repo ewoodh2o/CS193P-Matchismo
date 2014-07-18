@@ -22,5 +22,6 @@
 
 @property (nonatomic, readonly) NSInteger score;
 @property (nonatomic, readonly) NSInteger matchMode;
+@property (nonatomic, readonly) NSString *lastAction;
 
 @end

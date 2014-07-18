@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *matchMode;
+@property (weak, nonatomic) IBOutlet UILabel *lastActionLabel;
 
 @end
 
@@ -64,6 +65,7 @@
         cardButton.enabled = !card.isMatched;
     }
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
+    self.lastActionLabel.text = self.game.lastAction;
 }
 
 - (NSString *)titleForCard:(Card *)card
